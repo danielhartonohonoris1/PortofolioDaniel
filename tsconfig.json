@@ -30,4 +30,6 @@
     "src/components/common/Tawk.jsx"
   ],
   "exclude": ["node_modules"]
+  
 }
+
