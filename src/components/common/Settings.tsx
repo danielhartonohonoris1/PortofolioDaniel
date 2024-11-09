@@ -58,27 +58,6 @@ export function Settings() {
             </svg>
           </button>
         </SpeedDialHandler>
-        <SpeedDialContent>
-          <SpeedDialAction
-            onClick={() => {
-              setTheme(theme == 'light' ? 'dark' : 'light')
-            }}
-            className="h-16 w-16 cursor-pointer rounded-full border-4 border-black-primary bg-yellow-primary duration-150 hover:bg-orange-primary md:right-16 md:block"
-          >
-            <ThemeButton theme={theme ? theme : 'light'} />
-          </SpeedDialAction>
-          <SpeedDialAction className="h-16 w-16 cursor-pointer rounded-full border-4 border-black-primary bg-yellow-primary duration-150 hover:bg-orange-primary md:right-16 md:block">
-            <AudioPlayer isPlaying={isPlaying} toggle={toggle} />
-          </SpeedDialAction>
-          <SpeedDialAction
-            onClick={() => {
-              setPetEnable(!petEnable)
-            }}
-            className="h-16 w-16 cursor-pointer rounded-full border-4 border-black-primary bg-yellow-primary duration-150 hover:bg-orange-primary md:right-16 md:block"
-          >
-            <ButtonPets isEnable={petEnable} />
-          </SpeedDialAction>
-        </SpeedDialContent>
       </SpeedDial>
       {isPlaying && (
         <div className="absolute flex translate-x-12 items-center rounded-md border-4 border-black-primary bg-yellow-primary px-3 shadow-button-card">

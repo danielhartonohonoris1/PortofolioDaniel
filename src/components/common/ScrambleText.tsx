@@ -15,14 +15,6 @@ const ScrambleText: React.FC<Props> = ({ children }) => {
   const TARGET_TEXT = children
 
   const [text, setText] = useState(TARGET_TEXT)
-
-  useEffect(() => {
-    scramble()
-    return () => {
-      stopScramble()
-    }
-  }, []) // Empty dependency array ensures useEffect runs only once on component mount
-
   const scramble = () => {
     let pos = 0
 
